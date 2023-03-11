@@ -2,16 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-deployment
-  app: webapp-pod
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: frontend
+      app: webapp
   template:
     metadata:
       labels:
-        app: frontend
+        app: webapp
     spec:
       containers:
         - name: nginx
